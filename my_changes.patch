@@ -48,4 +48,4 @@ index 84b9077..6829c99 100755
 -tegrastats  
 +stress-ng --cpu ${nproc} &
 +./gpu_burn 100000 &
-+./tegrastats  
++./tegrastats 

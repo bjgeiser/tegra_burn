@@ -1,6 +1,10 @@
 #!/bin/bash
 
-stress-ng --cpu ${nproc} &
+output_dir=$PWD
+
+cd /app
+
+stress-ng --cpu 4 &
 ./gpu_burn 100000 &
-./tegrastats | tee ./tegrastats.log
+./tegrastats | tee $output_dir/tegrastats.log
 
